@@ -7,6 +7,7 @@ A production-ready, environment-agnostic AI pipeline that ingests documents, cre
 
 Built with **FastAPI**, **LangChain logic**, **ChromaDB**, and **Groq**.
 
+![Project Homepage](assets/homepage.png)
 ## 📂 Project Structure
 ````markdown
 

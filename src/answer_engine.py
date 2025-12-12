@@ -3,7 +3,6 @@ from typing import List
 from src.interfaces import BaseLLM, Document
 from src.retriever import Retriever
 
-# Try importing Groq
 try:
     from groq import Groq
 except ImportError:
