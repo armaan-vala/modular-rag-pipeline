@@ -1,0 +1,39 @@
+:root {
+    --primary: #4F46E5;
+    --bg: #F3F4F6;
+    --sidebar-bg: #FFFFFF;
+    --chat-bg: #FFFFFF;
+    --user-msg-bg: #4F46E5;
+    --ai-msg-bg: #E5E7EB;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+
+body { background-color: var(--bg); height: 100vh; display: flex; align-items: center; justify-content: center; }
+
+.container { display: flex; width: 90%; max-width: 1200px; height: 85vh; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+
+/* Sidebar */
+.sidebar { width: 300px; background: var(--sidebar-bg); border-right: 1px solid #e5e7eb; padding: 2rem; display: flex; flex-direction: column; gap: 1.5rem; }
+.upload-section { display: flex; flex-direction: column; gap: 1rem; }
+.upload-btn { border: 2px dashed #cbd5e1; padding: 1.5rem; text-align: center; border-radius: 8px; cursor: pointer; transition: 0.2s; color: #64748b; }
+.upload-btn:hover { border-color: var(--primary); color: var(--primary); }
+#ingestBtn { background: var(--primary); color: white; border: none; padding: 0.8rem; border-radius: 6px; cursor: pointer; font-weight: 600; }
+#ingestBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+.status { font-size: 0.9rem; min-height: 20px; }
+.status.success { color: green; }
+.status.error { color: red; }
+
+/* Chat Area */
+.chat-interface { flex: 1; display: flex; flex-direction: column; background: var(--chat-bg); }
+header { padding: 1.5rem; border-bottom: 1px solid #e5e7eb; }
+.chat-history { flex: 1; padding: 2rem; overflow-y: auto; display: flex; flex-direction: column; gap: 1rem; }
+
+.message { max-width: 80%; padding: 1rem; border-radius: 12px; line-height: 1.5; }
+.message.user { align-self: flex-end; background: var(--user-msg-bg); color: white; border-bottom-right-radius: 2px; }
+.message.ai { align-self: flex-start; background: var(--ai-msg-bg); color: #1f2937; border-bottom-left-radius: 2px; }
+
+.input-area { padding: 1.5rem; border-top: 1px solid #e5e7eb; display: flex; gap: 1rem; }
+input[type="text"] { flex: 1; padding: 1rem; border: 1px solid #e5e7eb; border-radius: 8px; outline: none; }
+input[type="text"]:focus { border-color: var(--primary); }
+button { padding: 0 1.5rem; background: var(--primary); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Agent - RAG Pipeline</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>📄 Knowledge Base</h2>
+            <div class="upload-section">
+                <input type="file" id="fileInput" accept=".pdf,.txt,.docx" hidden>
+                <label for="fileInput" class="upload-btn">
+                    <span id="fileName">Select Document</span>
+                </label>
+                <button onclick="uploadFile()" id="ingestBtn">Ingest Document</button>
+            </div>
+            <div id="statusMessage" class="status"></div>
+            <div class="info">
+                <p><strong>Supported:</strong> PDF, TXT, DOCX</p>
+                <p>Upload a document to train the AI.</p>
+            </div>
+        </aside>
+
+        <main class="chat-interface">
+            <header>
+                <h1>AI Assistant 🤖</h1>
+            </header>
+            <div class="chat-history" id="chatHistory">
+                <div class="message ai">
+                    <p>Hello! Upload a document on the left, then ask me anything about it.</p>
+                </div>
+            </div>
+            <div class="input-area">
+                <input type="text" id="queryInput" placeholder="Ask a question about your documents..." onkeypress="handleEnter(event)">
+                <button onclick="sendQuery()">Send 🚀</button>
+            </div>
+        </main>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

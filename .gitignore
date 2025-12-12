@@ -205,3 +205,40 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+# ===============================================
+# STRICT WHITELIST (APPEND TO BOTTOM)
+# ===============================================
+
+# 1. Ignore EVERYTHING by default (Database, Cache, Secrets, etc.)
+*
+
+# 2. Allow specific folders (so Git can check inside them)
+!src/
+!tests/
+!assets/
+!static/
+
+# 3. Allow Root Files
+!main.py
+!architecture.md
+!README.md
+!demo.ipynb
+!requirements.txt
+!.gitignore
+
+# 4. Allow Source Modules (Inside src/)
+!src/ingestion.py
+!src/embedder.py
+!src/vector_store.py
+!src/retriever.py
+!src/answer_engine.py
+!src/interfaces.py
+!src/config.py
+!src/__init__.py
+
+# 5. Allow Tests, UI, and Images
+!tests/**
+!static/**
+!assets/**
