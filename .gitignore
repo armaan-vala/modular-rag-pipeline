@@ -242,3 +242,34 @@ __marimo__/
 !tests/**
 !static/**
 !assets/**
+
+# --- System & OS Files (Ye upload nahi hone chahiye) ---
+.DS_Store
+Thumbs.db
+
+# --- Python System Files (Compiled cache) ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Virtual Environments (Ye sabse important hai ignore karna) ---
+# Local system ki libraries server par nahi jani chahiye
+venv/
+env/
+.venv/
+.env_back/
+
+# --- Environment Variables & Secrets (CRITICAL FOR SAFETY) ---
+# Is file me aapki API keys hoti hain, ise kabhi upload mat karna
+.env
+.env.local
+.env.development
+.env.test
+
+# --- IDE Settings (Optional, clutter prevent karne ke liye) ---
+.vscode/
+.idea/
+
+# --- Logs & Databases ---
+*.log
+*.sqlite3
